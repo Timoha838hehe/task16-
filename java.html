@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Objects</title>
+</head>
+<body>
+    <h1>Car Objects</h1>
+    <script>
+// Створення класу для об'єкту "машина"
+class Car {
+    constructor(name, speed, year) {
+        this.name = name;
+        this.speed = speed;
+        this.year = year;
+    }
+
+    // Метод для отримання рядкового представлення об'єкту
+    toString() {
+        return `Name: ${this.name}, Speed: ${this.speed}, Year: ${this.year}`;
+    }
+
+    // Метод для порівняння з іншим об'єктом
+    compareToObject(otherCar) {
+        return this.name === otherCar.name &&
+               this.speed === otherCar.speed &&
+               this.year === otherCar.year;
+    }
+}
+
+// Створення декількох об'єктів цього класу
+const car1 = new Car("Toyota", 200, 2010);
+const car2 = new Car("BMW", 220, 2015);
+const car3 = new Car("Mercedes", 210, 2020);
+
+// Виведення інформації про кожен об'єкт
+console.log(car1.toString());
+console.log(car2.toString());
+console.log(car3.toString());
+
+// Порівняння цих об'єктів
+console.log("car1 і car2 однакові:", car1.compareToObject(car2));
+console.log("car2 і car3 однакові:", car2.compareToObject(car3));
+
+</script>
+</body>
+</html>
+
+я пишу коментарі в коді щоб краще запамятати
